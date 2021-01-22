@@ -1,0 +1,10 @@
+---
+- name: install other packages
+  package:
+    name:
+      - tmux
+      - micro
+      - nano
+      - screen
+    state: latest
+  become: yes
