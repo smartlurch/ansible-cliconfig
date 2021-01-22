@@ -6,5 +6,6 @@
       - micro
       - nano
       - screen
+      - fish
     state: latest
   become: yes
