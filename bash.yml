@@ -1,0 +1,24 @@
+---
+- name: Install required packages
+  package:
+    name:
+      - bash
+      - bash-completion
+    state: latest
+  become: yes
+
+- name: copy over bashrc files
+  copy:
+    src: bashrc
+    dest: "{{ bashrc }}"
+    backup: yes
+    mode: 660
+
+- name: copy over bash_aliases files
+  copy:
+    src: bash_aliases
+    dest: "{{ bash_aliases }}"
+    backup: yes
+    mode: 660
+  tags:
+    - copy_files
