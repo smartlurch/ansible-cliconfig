@@ -3,6 +3,8 @@
   hosts: localhost
   
   tasks:
+    - name: install packages
+      include: other.yml
     - name: install and config vim
       include: vim.yml
       vars:
