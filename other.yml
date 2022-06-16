@@ -1,5 +1,5 @@
 ---
-- name: install other packages
+- name: install cli packages
   package:
     name:
       - tmux
@@ -7,5 +7,8 @@
       - nano
       - screen
       - fish
+      - ranger
+      - git
+      - tldr
     state: latest
   become: yes

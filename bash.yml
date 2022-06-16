@@ -12,13 +12,13 @@
     src: bashrc
     dest: "{{ bashrc }}"
     backup: yes
-    mode: 660
+    mode: 0770
 
 - name: BASH - copy over bash_aliases files
   copy:
     src: bash_aliases
     dest: "{{ bash_aliases }}"
     backup: yes
-    mode: 660
+    mode: 0770
   tags:
     - copy_files
