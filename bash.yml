@@ -1,5 +1,5 @@
 ---
-- name: Install required packages
+- name: BASH - Install required packages
   package:
     name:
       - bash
@@ -7,14 +7,14 @@
     state: latest
   become: yes
 
-- name: copy over bashrc files
+- name: BASH - copy over bashrc files
   copy:
     src: bashrc
     dest: "{{ bashrc }}"
     backup: yes
     mode: 660
 
-- name: copy over bash_aliases files
+- name: BASH - copy over bash_aliases files
   copy:
     src: bash_aliases
     dest: "{{ bash_aliases }}"
