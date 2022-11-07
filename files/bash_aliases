@@ -6,3 +6,13 @@ alias glog='git log --oneline --graph --color --all --decorate'
 alias tarx='tar -xvzf'
 alias tarz='tar -cvzf'
 alias upt='sudo apt update && sudo apt upgrade -y'
+
+alias reb="sudo reboot"
+alias sd="sudo shutdown -h now"
+alias e="vim "
+alias se="sudo vim "
+alias dcup="docker-compose up -d"
+alias dcdown="docker-compose down"
+alias apb="ansible-playbook "
+alias ag="ansible-galaxy "
+
