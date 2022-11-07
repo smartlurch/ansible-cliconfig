@@ -29,6 +29,14 @@ alias e="vim "
 alias se="sudo vim "
 '''
 
+cheatsheets:
+bash:
+```shell
+chtsh (){
+  curl https://cheat.sh/"$1"
+}
+```
+
 docker-compose:
 '''shell
 alias dcup="docker-compose up -d"
