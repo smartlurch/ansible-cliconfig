@@ -11,6 +11,7 @@
         vim_dir: "{{ ansible_env.HOME }}/.vim"
         vimrc: "{{ ansible_env.HOME }}/.vimrc"
     - name: install and configure bash
+      tags: bash
       include: tasks/bash.yml
       vars:
         bashrc: "{{ ansible_env.HOME }}/.bashrc"
