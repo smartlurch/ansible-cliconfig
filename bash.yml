@@ -16,7 +16,7 @@
 
 - name: BASH - copy over bash_aliases files
   copy:
-    src: bash_aliases
+    src: aliases
     dest: "{{ bash_aliases }}"
     backup: yes
     mode: 0770
