@@ -4,14 +4,14 @@
   
   tasks:
     - name: install packages
-      include: other.yml
+      include: tasks/other.yml
     - name: install and config vim
-      include: vim.yml
+      include: tasks/vim.yml
       vars:
         vim_dir: "{{ ansible_env.HOME }}/.vim"
         vimrc: "{{ ansible_env.HOME }}/.vimrc"
     - name: install and configure bash
-      include: bash.yml
+      include: tasks/bash.yml
       vars:
         bashrc: "{{ ansible_env.HOME }}/.bashrc"
         bash_aliases: "{{ ansible_env.HOME }}/.bash_aliases"        
