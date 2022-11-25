@@ -16,7 +16,7 @@
   tags:
     - copy_files
 
-- name: FISH - copy over aliases for ubuntu
+- name: FISH - copy over aliases for fedora
   copy:
     src: aliases_fedora
     dest: "{{ fish_aliases }}"
