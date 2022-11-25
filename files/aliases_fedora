@@ -16,7 +16,7 @@ alias dcdown="docker-compose down"
 alias apb="ansible-playbook "
 alias ag="ansible-galaxy "
 
-alias gac="git add . && got commit -m "
+alias gac="git add . && git commit -m "
 
 
 chtsh (){
