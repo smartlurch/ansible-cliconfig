@@ -20,4 +20,5 @@
       tags: fish
       include: tasks/fish.yml
       vars:
-        fish_aliases: "{{ ansible_env.HOME }}/.config/fish/conf.d/aliases.fish"        
+        fish_aliases: "{{ ansible_env.HOME }}/.config/fish/conf.d/aliases.fish" 
+        fish_functions: "{{ ansible_env.HOME }}/.config/fish/conf.d/functions.fish"        

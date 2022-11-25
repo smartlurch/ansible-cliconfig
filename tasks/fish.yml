@@ -26,3 +26,11 @@
   tags:
     - copy_files
 
+- name: FISH - copy over functions file 
+  copy:
+    src: functions.fish
+    dest: "{{ fish_functions }}"
+    backup: yes
+    mode: 0770
+  tags:
+    - copy_files
