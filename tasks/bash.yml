@@ -14,11 +14,23 @@
     backup: yes
     mode: 0770
 
-- name: BASH - copy over bash_aliases files
+- name: BASH - copy over bash_aliases for ubuntu
   copy:
-    src: aliases
+    src: aliases_ubuntu
     dest: "{{ bash_aliases }}"
     backup: yes
     mode: 0770
+  when: ansible_distribution == "Ubuntu"
   tags:
     - copy_files
+
+- name: BASH - copy over bash_aliases for ubuntu
+  copy:
+    src: aliases_fedora
+    dest: "{{ bash_aliases }}"
+    backup: yes
+    mode: 0770
+  when: ansible_distribution == "Fedora"
+  tags:
+    - copy_files
+
