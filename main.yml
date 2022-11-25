@@ -15,7 +15,8 @@
       include: tasks/bash.yml
       vars:
         bashrc: "{{ ansible_env.HOME }}/.bashrc"
-        bash_aliases: "{{ ansible_env.HOME }}/.bash_aliases"        
+        bash_aliases: "{{ ansible_env.HOME }}/.bash_aliases"
+        bash_functions: "{{ ansible_env.HOME }}/.bash_functions"        
     - name: install and configure fish
       tags: fish
       include: tasks/fish.yml
