@@ -1,0 +1,36 @@
+---
+- name: FISH - Install required packages
+  package:
+    name:
+      - fish
+    state: latest
+  become: yes
+
+- name: FISH - copy over aliases for ubuntu
+  copy:
+    src: aliases_ubuntu
+    dest: "{{ fish_aliases }}"
+    backup: yes
+    mode: 0770
+  when: ansible_distribution == "Ubuntu"
+  tags:
+    - copy_files
+
+- name: FISH - copy over aliases for fedora
+  copy:
+    src: aliases_fedora
+    dest: "{{ fish_aliases }}"
+    backup: yes
+    mode: 0770
+  when: ansible_distribution == "Fedora"
+  tags:
+    - copy_files
+
+- name: FISH - copy over functions file 
+  copy:
+    src: functions.fish
+    dest: "{{ fish_functions }}"
+    backup: yes
+    mode: 0770
+  tags:
+    - copy_files

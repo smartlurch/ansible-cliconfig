@@ -34,3 +34,11 @@
   tags:
     - copy_files
 
+- name: BASH - copy over bash_functions 
+  copy:
+    src: functions.bash
+    dest: "{{ bash_functions }}"
+    backup: yes
+    mode: 0770
+  tags:
+    - copy_files

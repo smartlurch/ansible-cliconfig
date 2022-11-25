@@ -19,7 +19,3 @@ alias ag="ansible-galaxy "
 alias gac="git add . && git commit -m "
 
 
-chtsh (){
-  curl https://cheat.sh/"$1"
-}
-
