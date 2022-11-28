@@ -2,7 +2,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-colo darkblue
+colorscheme  dracula
 
 " line numbers
 set nu
@@ -12,7 +12,13 @@ set smartindent
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
-
+" other custom vim settings
+set noerrorbells
+set nowrap
+set nohlsearch
+set hidden
+set incsearch
+set scrolloff=8
 
 " Configuration vim Airline
 set laststatus=2

@@ -59,6 +59,8 @@
       url: https://github.com/tpope/vim-fugitive
     - name: vim-floaterm
       url: https://github.com/voldikss/vim-floaterm
+    - name: dracula 
+      url: https://github.com/dracula/vim
 
   - name: VIM - Ensure .vimrc config in place
     copy:
