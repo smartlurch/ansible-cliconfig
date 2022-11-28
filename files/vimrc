@@ -4,6 +4,16 @@ filetype plugin indent on
 
 colo darkblue
 
+" line numbers
+set nu
+set relativenumber
+" tabs as spaces
+set smartindent
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+
+
 " Configuration vim Airline
 set laststatus=2
 

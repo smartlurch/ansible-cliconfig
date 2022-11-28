@@ -6,6 +6,7 @@
     - name: install packages
       include: tasks/other.yml
     - name: install and config vim
+      tags: vim
       include: tasks/vim.yml
       vars:
         vim_dir: "{{ ansible_env.HOME }}/.vim"

@@ -3,12 +3,25 @@
       name:
         - vim
         - git
-        - fonts-powerline
         - fzf
       state: latest
     become: yes
-    tags:
-      - install_packages
+
+  - name: VIM - Install required packages (ubuntu)
+    package:
+      name:
+        - fonts-powerline
+      state: latest
+    become: yes
+    when: ansible_distribution == "Ubuntu"
+
+  - name: VIM - Install required packages (fedora)
+    package:
+      name:
+        - powerline-fonts
+      state: latest
+    become: yes
+    when: ansible_distribution == "Fedora"
 
   - name: VIM - Ensure .vim/{autoload,bundle} directory exists
     file:
