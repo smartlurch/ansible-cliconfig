@@ -17,6 +17,7 @@ alias apb="ansible-playbook "
 alias ag="ansible-galaxy "
 
 alias gac="git add . && git commit -m "
-
+alias gpush="git push"
+alias gpull="git pull"
 
 
