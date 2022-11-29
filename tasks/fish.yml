@@ -8,7 +8,7 @@
 
 - name: FISH - Create a config directory if it does not exist
   ansible.builtin.file:
-    path: {{ fish_conf }}
+    path: "{{ fish_conf }}"
     state: directory
     mode: '0755'
     
