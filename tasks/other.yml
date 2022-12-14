@@ -2,6 +2,7 @@
 - name: install cli packages
   package:
     name:
+      - neofetch
       - tmux
       - micro
       - nano
