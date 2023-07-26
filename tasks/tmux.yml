@@ -1,0 +1,22 @@
+  - name: TMUX - Install required packages
+    package:
+      name:
+        - tmux
+        - git
+      state: latest
+    become: yes
+
+  - name: TMUX - Deploy plugins
+    git:
+      dest: "{{ tmux_plugins }}"
+      repo: "https://github.com/tmux-plugins/tpm.git"
+      clone: yes
+      update: yes
+      recursive: no
+
+  - name: TMUX - Ensure tmux conf config in place
+    copy:
+      src: tmux.conf
+      dest: "{{ tmux_conf }}"
+      backup: yes
+      mode: 0770

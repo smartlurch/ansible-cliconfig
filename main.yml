@@ -24,4 +24,11 @@
       vars:
         fish_conf: "{{ ansible_env.HOME }}/.config/fish/conf.d/" 
         fish_aliases: "{{ ansible_env.HOME }}/.config/fish/conf.d/aliases.fish" 
-        fish_functions: "{{ ansible_env.HOME }}/.config/fish/conf.d/functions.fish"        
+        fish_functions: "{{ ansible_env.HOME }}/.config/fish/conf.d/functions.fish"
+    - name: install and configure tmux
+      tags: tmux
+      include: tasks/tmux.yml
+      vars:
+        tmux_conf: "{{ ansible_env.HOME }}/.tmux.conf" 
+        tmux_plugins: "{{ ansible_env.HOME }}/.tmux/plugins/tpm" 
+
