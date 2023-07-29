@@ -3,13 +3,24 @@
   package:
     name:
       - neofetch
-      - tmux
       - micro
       - nano
-      - screen
-      - fish
       - ranger
       - git
       - tldr
+      - zoxide
+      - exa
+      - ripgrep
+      - bat
+      - fzf
+      - du-dust
+      - ncdu
+      - htop
+      - bottom
+      - tealdeer
+      - fd
+      - procs
+      - duf
+      - dua-cli
     state: latest
   become: yes
